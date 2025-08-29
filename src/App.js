@@ -155,7 +155,8 @@ export default function App() {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-100 p-6">
-      <h1 className="text-2xl font-bold mb-6">Mapa Interativo</h1>
+      <h1 className="text-2xl font-bold mb-6">Território Congregação Candeias</h1>
+      <h3 className="text-2xl font-bold mb-6">Marque aqui o território realizado no campo</h3>
 
       <div className="w-full max-w-5xl bg-white border rounded-lg shadow p-2">
         <Mapa
@@ -172,21 +173,21 @@ export default function App() {
           className="px-4 py-2 bg-green-600 text-white rounded-lg shadow disabled:opacity-50"
           disabled={selected.length === 0}
         >
-          Confirmar seleção ({selected.length})
+          Confirmar Territórios ({selected.length})
         </button>
 
-        <button
+        {/* <button
           onClick={handleReset}
           className="px-4 py-2 bg-red-600 text-white rounded-lg shadow"
         >
           Resetar quadras
-        </button>
+        </button> */}
       </div>
 
-      <div className="mt-4 text-sm text-gray-700">
+      {/* <div className="mt-4 text-sm text-gray-700">
         <div>Selecionadas (front): {selected.join(", ") || "—"}</div>
         <div>Confirmadas (BD): {saved.join(", ") || "—"}</div>
-      </div>
+      </div> */}
 
       {/* Sem borda preta: não defino stroke aqui. Se quiser hover, use só opacidade */}
       <style>{`
